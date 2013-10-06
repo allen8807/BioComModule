@@ -36,6 +36,13 @@ SET(CMAKE_CXXFLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
 SET(CMAKE_CXXFLAGS_RELEASE "$ENV{CXXFLAGS} -O2 -Wall")
 SET(CMAKE_BUILD_TYPE "Release")
 
+############################ FIND PACKAGE
+# Libraries specifics. Define here cmake packages
+# usefull to your project
+
+
+FIND_PACKAGE(Boost REQUIRED thread)
+SET(Boost_USE_STATIC_LIBS ON)
 
 ############################ SUBDIRECTORIES INCLUSION
 SET(AGENT_SOURCE_DIR ${CMAKE_SOURCE_DIR})
